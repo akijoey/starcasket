@@ -1,0 +1,48 @@
+{
+  "name": "starcasket",
+  "version": "1.0.0",
+  "description": "Casket of Star.",
+  "keywords": [
+    "utility"
+  ],
+  "repository": "github:akijoey/starcasket",
+  "homepage": "https://github.com/akijoey/starcasket#readme",
+  "bugs": "https://github.com/akijoey/starcasket/issues",
+  "author": "AkiJoey <akijoey@akijoey.com> (https://akijoey.com)",
+  "license": "MIT",
+  "main": "dist/starcasket.js",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "compile": "rollup -c",
+    "start": "npm run compile -- --environment NODE_ENV:development -w",
+    "prebuild": "npm run clean",
+    "build": "npm run compile -- --environment NODE_ENV:production",
+    "lint": "devkit lint",
+    "test": "devkit test",
+    "format": "devkit format",
+    "prepare": "devkit prepare",
+    "release": "devkit release"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@akijoey/devkit": "latest",
+    "@babel/core": "^7.18.13",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "core-js": "^3.24.1",
+    "esbuild": "^0.15.5",
+    "regenerator-runtime": "^0.13.9",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.1",
+    "rollup-plugin-esbuild": "^4.9.3",
+    "typescript": "^4.7.4"
+  }
+}
