@@ -1,3 +1,30 @@
+/* eslint
+  @typescript-eslint/no-this-alias: [
+    "error",
+    {
+      "allowDestructuring": false,
+      "allowedNames": ["self"]
+    }
+  ]
+*/
+
+const before = function before(this: Function, callback: Function): Function {
+  const self = this
+  return function (this: any) {
+    callback.apply(this, arguments)
+    return self.apply(this, arguments)
+  }
+}
+
+const after = function before(this: Function, callback: Function): Function {
+  const self = this
+  return function (this: any) {
+    const result = self.apply(this, arguments)
+    callback.apply(this, arguments)
+    return result
+  }
+}
+
 const curry = function curry(this: Function, ...args: any[]): any {
   if (args.length < this.length) {
     return curry.bind(this, ...args)
@@ -19,10 +46,12 @@ const pipe = function pipe(this: Function, ...args: any[]): any {
 
 const install = (): void => {
   Object.assign(Function.prototype, {
+    before,
+    after,
     curry,
     compose,
     pipe
   })
 }
 
-export { curry, compose, pipe, install }
+export { before, after, curry, compose, pipe, install }
