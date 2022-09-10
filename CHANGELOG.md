@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/akijoey/starcasket/compare/v1.0.1...v1.0.2) (2022-09-10)
+
+
+### Bug Fixes
+
+* export declaration files ([f23913e](https://github.com/akijoey/starcasket/commit/f23913e5f77194ed60cc0769c08bd7fb926d7396))
+
 ## [1.0.1](https://github.com/akijoey/starcasket/compare/v1.0.0...v1.0.1) (2022-08-28)
 
 
