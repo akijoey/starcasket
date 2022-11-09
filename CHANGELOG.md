@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/akijoey/starcasket/compare/v1.0.2...v1.0.3) (2022-11-09)
+
+
+### Bug Fixes
+
+* lazy load ([6930761](https://github.com/akijoey/starcasket/commit/693076158ada48810b78be0867894642b780de92))
+
 ## [1.0.2](https://github.com/akijoey/starcasket/compare/v1.0.1...v1.0.2) (2022-09-10)
 
 
