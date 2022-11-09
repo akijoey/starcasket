@@ -16,7 +16,7 @@ const before = function before(this: Function, callback: Function): Function {
   }
 }
 
-const after = function before(this: Function, callback: Function): Function {
+const after = function after(this: Function, callback: Function): Function {
   const self = this
   return function (this: any) {
     const result = self.apply(this, arguments)
