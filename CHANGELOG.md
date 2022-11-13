@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/akijoey/starcasket/compare/v1.0.3...v1.0.4) (2022-11-13)
+
+
+### Bug Fixes
+
+* export image ([d570839](https://github.com/akijoey/starcasket/commit/d57083971dd18aecd8bf633a647346e1dd880893))
+
 ## [1.0.3](https://github.com/akijoey/starcasket/compare/v1.0.2...v1.0.3) (2022-11-09)
 
 
