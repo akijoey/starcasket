@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/akijoey/starcasket/compare/v1.0.4...v1.0.5) (2022-11-17)
+
+
+### Bug Fixes
+
+* array partition ([84c2b4c](https://github.com/akijoey/starcasket/commit/84c2b4ca7427f9b31ba3345f9fd5dfc184ec273a))
+
 ## [1.0.4](https://github.com/akijoey/starcasket/compare/v1.0.3...v1.0.4) (2022-11-13)
 
 
