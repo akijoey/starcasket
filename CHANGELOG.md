@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/akijoey/starcasket/compare/v1.0.5...v1.0.6) (2023-02-10)
+
+
+### Bug Fixes
+
+* build badge ([e1dc817](https://github.com/akijoey/starcasket/commit/e1dc817fedc1d44984fef8decefd4f0dfd11d11a))
+
 ## [1.0.5](https://github.com/akijoey/starcasket/compare/v1.0.4...v1.0.5) (2022-11-17)
 
 
