@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/akijoey/starcasket/compare/v1.0.6...v1.1.0) (2023-12-29)
+
+
+### Features
+
+* copy methods ([4fa2fa4](https://github.com/akijoey/starcasket/commit/4fa2fa41dfc0f84938254a3461427f5ef9ebfded))
+
 ## [1.0.6](https://github.com/akijoey/starcasket/compare/v1.0.5...v1.0.6) (2023-02-10)
 
 
