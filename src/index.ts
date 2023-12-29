@@ -4,6 +4,7 @@ import * as imageExports from './extends/image'
 import * as objectExports from './extends/object'
 import * as timerExports from './encaps/timer'
 import * as requestExports from './encaps/request'
+import * as copyExports from './encaps/copy'
 
 const stars = [
   arrayExports,
@@ -11,7 +12,8 @@ const stars = [
   imageExports,
   objectExports,
   timerExports,
-  requestExports
+  requestExports,
+  copyExports
 ]
 
 const starcasket = Object.assign(
