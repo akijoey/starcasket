@@ -1,9 +1,9 @@
-type Timer = (
+export type Timer = (
   callback: Function,
   delay: number | undefined
 ) => (this: any, ...args: any[]) => void
 
-const debounce: Timer = function debounce(callback, delay) {
+export const debounce: Timer = function debounce(callback, delay) {
   let timer: NodeJS.Timeout | undefined
   return function (...args) {
     if (timer !== undefined) {
@@ -15,7 +15,7 @@ const debounce: Timer = function debounce(callback, delay) {
   }
 }
 
-const throttle: Timer = function throttle(callback, delay) {
+export const throttle: Timer = function throttle(callback, delay) {
   let vaild = true
   return function (...args) {
     if (vaild) {
@@ -28,11 +28,9 @@ const throttle: Timer = function throttle(callback, delay) {
   }
 }
 
-const install = (): void => {
+export const install = (): void => {
   Object.assign(globalThis, {
     debounce,
     throttle
   })
 }
-
-export { debounce, throttle, install }

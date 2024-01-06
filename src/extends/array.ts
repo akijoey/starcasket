@@ -1,20 +1,20 @@
-const swap = function swap(this: any[], x: number, y: number): any[] {
+export const swap = function swap(this: any[], x: number, y: number): any[] {
   this[x] = this.splice(y, 1, this[x])[0]
   return this
 }
 
-const shuffle = function shuffle(this: any[]): any {
+export const shuffle = function shuffle(this: any[]): any {
   for (let i = this.length; i > 0; i--) {
     swap.call(this, i - 1, Math.floor(Math.random() * i))
   }
   return this
 }
 
-const unique = function unique(this: any[]): any {
+export const unique = function unique(this: any[]): any {
   return [...new Set(this)]
 }
 
-const partition = function partition(
+export const partition = function partition(
   this: any[],
   callback: (item: any, index: number, array: any[]) => any,
   context?: any
@@ -29,7 +29,7 @@ const partition = function partition(
   )
 }
 
-const install = (): void => {
+export const install = (): void => {
   Object.assign(Array.prototype, {
     swap,
     shuffle,
@@ -37,5 +37,3 @@ const install = (): void => {
     partition
   })
 }
-
-export { swap, shuffle, unique, partition, install }

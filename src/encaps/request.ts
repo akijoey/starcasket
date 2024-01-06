@@ -1,29 +1,29 @@
-interface Response {
+export interface Response {
   data: any
   status?: number
   statusText?: string
   request?: XMLHttpRequest
 }
 
-interface RequestOptions {
+export interface RequestOptions {
   url: string
   data?: any
 }
 
-type Jsonp = (options: JsonpOptions) => Promise<Response>
-interface JsonpOptions extends RequestOptions {
+export type Jsonp = (options: JsonpOptions) => Promise<Response>
+export interface JsonpOptions extends RequestOptions {
   callback: string
 }
 
-type Ajax = (options: AjaxOptions) => Promise<Response>
-interface AjaxOptions extends RequestOptions {
+export type Ajax = (options: AjaxOptions) => Promise<Response>
+export interface AjaxOptions extends RequestOptions {
   method?: string
   headers?: { [key: string]: string }
   responseType?: XMLHttpRequestResponseType
 }
 
-const jsonp: Jsonp = ({ url, data, callback }) => {
-  return new Promise(resolve => {
+export const jsonp: Jsonp = async ({ url, data, callback }) => {
+  return await new Promise(resolve => {
     Object.assign(window, {
       [callback]: (data: any) => resolve({ data })
     })
@@ -38,8 +38,14 @@ const jsonp: Jsonp = ({ url, data, callback }) => {
   })
 }
 
-const ajax: Ajax = ({ url, method = 'GET', data, headers = {}, responseType }) => {
-  return new Promise((resolve, reject) => {
+export const ajax: Ajax = async ({
+  url,
+  method = 'GET',
+  data,
+  headers = {},
+  responseType
+}) => {
+  return await new Promise((resolve, reject) => {
     const request = new XMLHttpRequest()
     request.open(method, url)
     Object.keys(headers).forEach(key => {
@@ -51,8 +57,8 @@ const ajax: Ajax = ({ url, method = 'GET', data, headers = {}, responseType }) =
     request.send(data)
     request.onreadystatechange = () => {
       if (request.readyState === 4) {
-        const { status, statusText, response: data } = request;
-        const response = { data, status, statusText, request };
+        const { status, statusText, response: data } = request
+        const response = { data, status, statusText, request }
         if (status >= 200 && status <= 400) {
           resolve(response)
         } else {
@@ -63,24 +69,9 @@ const ajax: Ajax = ({ url, method = 'GET', data, headers = {}, responseType }) =
   })
 }
 
-const download = (url: string, filename: string) => {
-  return ajax({ url, responseType: 'blob' }).then(response => {
-    const link = document.createElement('a');
-    const url = URL.createObjectURL(response.data);
-    link.href = url;
-    link.download = filename;
-    link.click();
-    URL.revokeObjectURL(url);
-    return response;
-  })
-}
-
-const install = (): void => {
+export const install = (): void => {
   Object.assign(globalThis, {
     jsonp,
-    ajax,
-    download
+    ajax
   })
 }
-
-export { jsonp, ajax, download, install }

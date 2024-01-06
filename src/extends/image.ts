@@ -1,4 +1,4 @@
-const imageObserver = new IntersectionObserver(entries => {
+export const imageObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const image = entry.target as HTMLImageElement
@@ -9,16 +9,14 @@ const imageObserver = new IntersectionObserver(entries => {
   })
 })
 
-const lazyLoad = function lazyLoad(this: HTMLImageElement): void {
+export const lazyLoad = function lazyLoad(this: HTMLImageElement): void {
   this.dataset.src = this.src
   this.removeAttribute('src')
   imageObserver.observe(this)
 }
 
-const install = (): void => {
+export const install = (): void => {
   Object.assign(HTMLImageElement.prototype, {
     lazyLoad
   })
 }
-
-export { lazyLoad, install }
