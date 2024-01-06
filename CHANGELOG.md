@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/akijoey/starcasket/compare/v1.1.0...v1.1.1) (2024-01-06)
+
+
+### Bug Fixes
+
+* copy selection ([4bd99e1](https://github.com/akijoey/starcasket/commit/4bd99e1742a47d6f0a8870615b0542aee75ce619))
+
 # [1.1.0](https://github.com/akijoey/starcasket/compare/v1.0.6...v1.1.0) (2023-12-29)
 
 
