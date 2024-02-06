@@ -31,6 +31,18 @@ export const after = function after(
   }
 }
 
+export const memoize = function memoize(this: Function): any {
+  const cache = new Map()
+  const memoized = (...args: any[]) => {
+    if (!cache.has(args)) {
+      cache.set(args, this(...args))
+    }
+    return cache.get(args)
+  }
+  memoized.cache = cache
+  return memoized
+}
+
 export const curry = function curry(this: Function, ...args: any[]): any {
   if (args.length < this.length) {
     return curry.bind(this, ...args)
