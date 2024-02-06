@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/akijoey/starcasket/compare/v1.1.1...v1.1.2) (2024-02-06)
+
+
+### Bug Fixes
+
+* memoize function ([ebeab7d](https://github.com/akijoey/starcasket/commit/ebeab7d9ee3fdf5b4550fb5647109030b2d2ad41))
+
 ## [1.1.1](https://github.com/akijoey/starcasket/compare/v1.1.0...v1.1.1) (2024-01-06)
 
 
