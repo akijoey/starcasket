@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/akijoey/starcasket/compare/v1.1.3...v1.1.4) (2024-02-15)
+
+
+### Bug Fixes
+
+* date format ([6c4b697](https://github.com/akijoey/starcasket/commit/6c4b697498a5bc4146326570781ee5fafc0043ac))
+
 ## [1.1.3](https://github.com/akijoey/starcasket/compare/v1.1.2...v1.1.3) (2024-02-06)
 
 
