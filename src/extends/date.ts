@@ -22,7 +22,9 @@ export const format = function format(
     const regexp = new RegExp(`(${key})`)
     if (regexp.test(fmt)) {
       fmt = fmt.replace(regexp, match => {
-        return match.length === 1 ? value : value.toString().padStart(2, '0')
+        return match.length === 1
+          ? value.toString()
+          : value.toString().padStart(2, '0')
       })
     }
   }
