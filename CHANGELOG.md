@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/akijoey/starcasket/compare/v1.1.4...v1.1.5) (2024-02-18)
+
+
+### Bug Fixes
+
+* capitalize string ([0f26efc](https://github.com/akijoey/starcasket/commit/0f26efc02644fb09377c0ac970f7d00df468a8d5))
+
 ## [1.1.4](https://github.com/akijoey/starcasket/compare/v1.1.3...v1.1.4) (2024-02-15)
 
 
