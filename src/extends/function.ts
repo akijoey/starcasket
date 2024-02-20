@@ -31,6 +31,17 @@ export const after = function after(
   }
 }
 
+export const partial = function partial(this: Function, ...args: any[]): any {
+  const self = this
+  return function (this: any, ...innerArgs: any[]) {
+    return self.call(
+      this,
+      ...args.map(arg => (arg === undefined ? innerArgs.shift() : arg)),
+      ...innerArgs
+    )
+  }
+}
+
 export const memoize = function memoize(this: Function): any {
   const cache = new Map()
   const memoized = (...args: any[]) => {
@@ -68,6 +79,9 @@ export const install = (): void => {
     after,
     curry,
     compose,
-    pipe
+    pipe,
+    partial(this: Function, ...args: any[]) {
+      return partial(this, ...args)
+    }
   })
 }
