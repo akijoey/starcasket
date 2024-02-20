@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/akijoey/starcasket/compare/v1.1.5...v1.1.6) (2024-02-20)
+
+
+### Bug Fixes
+
+* partial function ([67b7bf8](https://github.com/akijoey/starcasket/commit/67b7bf81e7c14756a3b1564e19382eb89a41e97c))
+
 ## [1.1.5](https://github.com/akijoey/starcasket/compare/v1.1.4...v1.1.5) (2024-02-18)
 
 
