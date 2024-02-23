@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/akijoey/starcasket/compare/v1.1.6...v1.1.7) (2024-02-23)
+
+
+### Bug Fixes
+
+* string case ([17c7e56](https://github.com/akijoey/starcasket/commit/17c7e5698f9fd30332278619910dcd93ab9fca81))
+
 ## [1.1.6](https://github.com/akijoey/starcasket/compare/v1.1.5...v1.1.6) (2024-02-20)
 
 
