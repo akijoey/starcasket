@@ -29,11 +29,28 @@ export const partition = function partition(
   )
 }
 
+export const group = function group(
+  this: any[],
+  callback: (item: any, index: number, array: any[]) => any,
+  context?: any
+): any[] {
+  return this.reduce((res, item, index, array) => {
+    const key = callback.call(context, item, index, array)
+    if (res.hasOwnProperty(key)) {
+      res[key].push(item)
+    } else {
+      res[key] = [item]
+    }
+    return res
+  }, {})
+}
+
 export const install = (): void => {
   Object.assign(Array.prototype, {
     swap,
     shuffle,
     unique,
-    partition
+    partition,
+    group
   })
 }
