@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/akijoey/starcasket/compare/v1.1.7...v1.1.8) (2024-02-26)
+
+
+### Bug Fixes
+
+* group array ([2d53a79](https://github.com/akijoey/starcasket/commit/2d53a793d560ecc28fe4a78edd68f79acc5a0e03))
+
 ## [1.1.7](https://github.com/akijoey/starcasket/compare/v1.1.6...v1.1.7) (2024-02-23)
 
 
