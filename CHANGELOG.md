@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/akijoey/starcasket/compare/v1.1.8...v1.1.9) (2024-02-27)
+
+
+### Bug Fixes
+
+* install partial ([17a35f3](https://github.com/akijoey/starcasket/commit/17a35f385157d9433ba2a21fb8fe99c5dd53bf2d))
+
 ## [1.1.8](https://github.com/akijoey/starcasket/compare/v1.1.7...v1.1.8) (2024-02-26)
 
 
