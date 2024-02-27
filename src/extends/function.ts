@@ -80,8 +80,6 @@ export const install = (): void => {
     curry,
     compose,
     pipe,
-    partial(this: Function, ...args: any[]) {
-      return partial(this, ...args)
-    }
+    partial
   })
 }
