@@ -27,10 +27,27 @@ export const freezeDeep = (obj: any): any => {
   return Object.freeze(obj)
 }
 
+export const defaults = (obj: any, ...sources: any[]): any => {
+  obj = Object(obj)
+  sources.forEach(source => {
+    source = Object(source)
+    for (const key in source) {
+      const value = obj[key]
+      if (
+        value === undefined ||
+        (value === Object.prototype[key] && !obj.hasOwnProperty(key))
+      ) {
+        obj[key] = source[key]
+      }
+    }
+  })
+}
+
 export const install = (): void => {
   Object.assign(Object, {
     inherit,
     cloneDeep,
-    freezeDeep
+    freezeDeep,
+    defaults
   })
 }
