@@ -14,6 +14,10 @@ export const unique = function unique(this: any[]): any {
   return [...new Set(this)]
 }
 
+export const compact = function compact(this: any[]): any[] {
+  return this.filter(Boolean)
+}
+
 export const partition = function partition(
   this: any[],
   callback: (item: any, index: number, array: any[]) => any,
@@ -45,12 +49,26 @@ export const group = function group(
   }, {})
 }
 
+export const chunk = function chunk(this: any[], size = 1): any[] {
+  size = Math.max(Number.parseInt(size), 0)
+
+  if (this.length === 0 || size === 0) {
+    return []
+  }
+
+  return Array.from({ length: Math.ceil(this.length / size) }, (_, index) => {
+    return this.slice(index * size, (index + 1) * size)
+  })
+}
+
 export const install = (): void => {
   Object.assign(Array.prototype, {
     swap,
     shuffle,
     unique,
+    compact,
     partition,
-    group
+    group,
+    chunk
   })
 }
