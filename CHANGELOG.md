@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/akijoey/starcasket/compare/v1.1.10...v1.1.11) (2024-08-06)
+
+
+### Bug Fixes
+
+* array chunk ([0e433d0](https://github.com/akijoey/starcasket/commit/0e433d053ea5f584c127d263c6e54a96dad5b32a))
+
 ## [1.1.10](https://github.com/akijoey/starcasket/compare/v1.1.9...v1.1.10) (2024-03-18)
 
 
