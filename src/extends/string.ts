@@ -1,3 +1,7 @@
+export const isString = function isString(value: unknown): boolean {
+  return typeof value === 'string' || value instanceof String
+}
+
 export const escape = function escape(this: string): string {
   const regexp = /[&<>"']/g
   const escapeMap: Record<string, string> = {
@@ -87,6 +91,9 @@ export const pascalCase = function pascalCase(this: string): string {
 }
 
 export const install = (): void => {
+  Object.assign(String, {
+    isString
+  })
   Object.assign(String.prototype, {
     escape,
     unescape,

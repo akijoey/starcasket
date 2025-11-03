@@ -28,9 +28,14 @@ export const throttle: Timer = function throttle(callback, delay) {
   }
 }
 
+export const delay = function delay(delay: number | undefined): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, delay))
+}
+
 export const install = (): void => {
   Object.assign(globalThis, {
     debounce,
-    throttle
+    throttle,
+    delay
   })
 }
