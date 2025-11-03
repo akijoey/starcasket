@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/akijoey/starcasket/compare/v1.1.11...v1.2.0) (2025-11-03)
+
+
+### Bug Fixes
+
+* update dependencies ([dfea07e](https://github.com/akijoey/starcasket/commit/dfea07ea2024a2a0965816fa5606be4ddc135e66))
+
+
+### Features
+
+* number extends ([27900b5](https://github.com/akijoey/starcasket/commit/27900b535d99d99277f591b3f085cbb60e587c13))
+
 ## [1.1.11](https://github.com/akijoey/starcasket/compare/v1.1.10...v1.1.11) (2024-08-06)
 
 
