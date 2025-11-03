@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/akijoey/starcasket/compare/v1.2.0...v1.2.1) (2025-11-03)
+
+
+### Bug Fixes
+
+* babel runtime ([b7b453b](https://github.com/akijoey/starcasket/commit/b7b453b73d67072fc47042eacd9f59b355420050))
+
 # [1.2.0](https://github.com/akijoey/starcasket/compare/v1.1.11...v1.2.0) (2025-11-03)
 
 
