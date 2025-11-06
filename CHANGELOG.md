@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/akijoey/starcasket/compare/v1.2.1...v1.3.0) (2025-11-06)
+
+
+### Features
+
+* date extends ([eb07153](https://github.com/akijoey/starcasket/commit/eb0715360e307b113d641e110edd85cf2d6c0e43))
+
 ## [1.2.1](https://github.com/akijoey/starcasket/compare/v1.2.0...v1.2.1) (2025-11-03)
 
 
