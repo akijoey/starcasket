@@ -1,5 +1,6 @@
 export const imageObserver =
-  globalThis.IntersectionObserver && new IntersectionObserver(entries => {
+  globalThis.IntersectionObserver &&
+  new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const image = entry.target as HTMLImageElement
