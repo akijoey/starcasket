@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/akijoey/starcasket/compare/v1.3.0...v1.3.1) (2025-11-11)
+
+
+### Bug Fixes
+
+* defaults object ([1c8e8b8](https://github.com/akijoey/starcasket/commit/1c8e8b862c93fb419434bf10575474aa249ab155))
+
 # [1.3.0](https://github.com/akijoey/starcasket/compare/v1.2.1...v1.3.0) (2025-11-06)
 
 
