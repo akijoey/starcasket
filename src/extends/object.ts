@@ -41,6 +41,7 @@ export const defaults = (obj: any, ...sources: any[]): any => {
       }
     }
   })
+  return obj
 }
 
 export const install = (): void => {
