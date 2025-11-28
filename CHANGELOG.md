@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/akijoey/starcasket/compare/v1.3.1...v1.4.0) (2025-11-28)
+
+
+### Features
+
+* handle daylight saving time ([78cb769](https://github.com/akijoey/starcasket/commit/78cb7692a51f3a3f775b10d865204dc95acb89ac))
+
 ## [1.3.1](https://github.com/akijoey/starcasket/compare/v1.3.0...v1.3.1) (2025-11-11)
 
 
