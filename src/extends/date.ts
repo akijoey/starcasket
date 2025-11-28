@@ -4,8 +4,8 @@ export const unix = function unix(timestamp: number): number {
   return new Date(timestamp * 1000).getTime()
 }
 
-export const offset = function offset(timeZone?: string): number {
-  const date = new Date()
+export const offset = function offset(timeZone?: string, date?: Date): number {
+  date = date ?? new Date()
   const timestamp = new Date(
     date.toLocaleString('en-US', { timeZone })
   ).getTime()
@@ -17,9 +17,10 @@ export const offset = function offset(timeZone?: string): number {
 
 export const zone = function zone(
   timeZone?: string,
-  formatISO?: boolean
+  formatISO?: boolean,
+  date?: Date
 ): string {
-  const value = offset(timeZone)
+  const value = offset(timeZone, date)
   const sign = value > 0 ? '-' : '+'
   const hours = Math.abs(Math.floor(value) / 60)
     .toString()
@@ -38,7 +39,7 @@ export const parseZone = function parseZone(
   const date = new Date(dateString)
 
   return new Date(
-    date.getTime() - (date.getTimezoneOffset() - offset(timeZone)) * 60000
+    date.getTime() - (date.getTimezoneOffset() - offset(timeZone, date)) * 60000
   ).getTime()
 }
 
@@ -75,8 +76,8 @@ export const format = function format(
     s: date.getSeconds().toString(),
     ss: date.getSeconds().toString().padStart(2, '0'),
     SSS: this.getMilliseconds().toString(),
-    Z: zone(timeZone, true),
-    ZZ: zone(timeZone)
+    Z: zone(timeZone, true, this),
+    ZZ: zone(timeZone, false, this)
   }
 
   return fmt.replace(regexp, (match, escape) => escape || matches[match])
@@ -274,6 +275,10 @@ export const isLeapYear = function isLeapYear(this: Date) {
   return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0
 }
 
+export const isDST = function isDST(this: Date) {
+  return offset('America/New_York', this) === 240
+}
+
 export const install = (): void => {
   Object.assign(Date, {
     unix,
@@ -318,6 +323,7 @@ export const install = (): void => {
     isBefore,
     isAfter,
     isBetween,
-    isLeapYear
+    isLeapYear,
+    isDST
   })
 }
