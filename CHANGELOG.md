@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/akijoey/starcasket/compare/v1.4.0...v1.4.1) (2025-12-20)
+
+
+### Bug Fixes
+
+* basic array method ([369e27b](https://github.com/akijoey/starcasket/commit/369e27b274a7ab4f19918872888086e547eff13f))
+* basic array method ([c8e47b1](https://github.com/akijoey/starcasket/commit/c8e47b1d97fde1102fce99d8cd20a84e0fd1cbb7))
+
 # [1.4.0](https://github.com/akijoey/starcasket/compare/v1.3.1...v1.4.0) (2025-11-28)
 
 
