@@ -1,16 +1,16 @@
-export const head = function head(this: any[]) {
+export const head = function head(this: any[]): any {
   return this[0]
 }
 
-export const tail = function tail(this: any[]) {
+export const tail = function tail(this: any[]): any[] {
   return this.slice(1)
 }
 
-export const initial = function initial(this: any[]) {
+export const initial = function initial(this: any[]): any[] {
   return this.slice(0, -1)
 }
 
-export const last = function last(this: any[]) {
+export const last = function last(this: any[]): any {
   return this[this.length - 1]
 }
 
@@ -66,7 +66,7 @@ export const group = function group(
 }
 
 export const chunk = function chunk(this: any[], size = 1): any[] {
-  size = Math.max(Number.parseInt(size), 0)
+  size = Math.max(Number.parseInt(size.toString()), 0)
 
   if (this.length === 0 || size === 0) {
     return []
