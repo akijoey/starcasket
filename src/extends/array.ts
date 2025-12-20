@@ -1,3 +1,19 @@
+export const head = function head(this: any[]) {
+  return this[0]
+}
+
+export const tail = function tail(this: any[]) {
+  return this.slice(1)
+}
+
+export const initial = function initial(this: any[]) {
+  return this.slice(0, -1)
+}
+
+export const last = function last(this: any[]) {
+  return this[this.length - 1]
+}
+
 export const swap = function swap(this: any[], x: number, y: number): any[] {
   this[x] = this.splice(y, 1, this[x])[0]
   return this
@@ -63,6 +79,10 @@ export const chunk = function chunk(this: any[], size = 1): any[] {
 
 export const install = (): void => {
   Object.assign(Array.prototype, {
+    head,
+    tail,
+    initial,
+    last,
     swap,
     shuffle,
     unique,
