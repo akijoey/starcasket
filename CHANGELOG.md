@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/akijoey/starcasket/compare/v1.4.1...v1.4.2) (2026-01-12)
+
+
+### Bug Fixes
+
+* precise math method ([29ada25](https://github.com/akijoey/starcasket/commit/29ada252917cc25d00aef7a1a359281d5b0c5906))
+
 ## [1.4.1](https://github.com/akijoey/starcasket/compare/v1.4.0...v1.4.1) (2025-12-20)
 
 
