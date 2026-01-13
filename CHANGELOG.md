@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/akijoey/starcasket/compare/v1.4.2...v1.4.3) (2026-01-13)
+
+
+### Bug Fixes
+
+* basic math method ([f10f588](https://github.com/akijoey/starcasket/commit/f10f5887d9a87eeb8e2573bdd95588697bd08453))
+
 ## [1.4.2](https://github.com/akijoey/starcasket/compare/v1.4.1...v1.4.2) (2026-01-12)
 
 
