@@ -22,6 +22,21 @@ export const mean = function mean(...args: number[]) {
   return sum(...args) / args.length
 }
 
+export const median = function median(...args: number[]) {
+  args.sort()
+  const mid = Math.floor(args.length / 2)
+  return args.length % 2 === 0 ? mean(args[mid - 1], args[mid]) : args[mid]
+}
+
+export const variance = function variance(...args: number[]) {
+  const m = mean(...args)
+  return mean(...args.map(num => Math.pow(num - m, 2)))
+}
+
+export const std = function std(...args: number[]) {
+  return Math.sqrt(variance(...args))
+}
+
 export const roundTo = function roundTo(num: number, precision = 0) {
   return Math.round(Number(num + 'e' + precision)) / Math.pow(10, precision)
 }
@@ -50,6 +65,9 @@ export const install = (): void => {
     divide,
     sum,
     mean,
+    median,
+    variance,
+    std,
     roundTo,
     floorTo,
     ceilTo,
