@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/akijoey/starcasket/compare/v1.4.4...v1.4.5) (2026-05-26)
+
+
+### Bug Fixes
+
+* basic statistic method ([0fca56f](https://github.com/akijoey/starcasket/commit/0fca56fcbe315eb3373f85ca0971480d6a994f14))
+
 ## [1.4.4](https://github.com/akijoey/starcasket/compare/v1.4.3...v1.4.4) (2026-03-02)
 
 
