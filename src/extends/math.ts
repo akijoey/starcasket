@@ -37,6 +37,12 @@ export const std = function std(...args: number[]) {
   return Math.sqrt(variance(...args))
 }
 
+export const zscore = function zscore(...args: number[]) {
+  const m = mean(...args)
+  const sigma = std(...args)
+  return args.map(num => (num - m) / sigma)
+}
+
 export const roundTo = function roundTo(num: number, precision = 0) {
   return Math.round(Number(num + 'e' + precision)) / Math.pow(10, precision)
 }
@@ -68,6 +74,7 @@ export const install = (): void => {
     median,
     variance,
     std,
+    zscore,
     roundTo,
     floorTo,
     ceilTo,

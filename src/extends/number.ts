@@ -10,12 +10,17 @@ export const toSigned = function toSigned(this: number): string {
   return this > 0 ? `+${this}` : this.toString()
 }
 
+export const toPercent = function toPercent(this: number): string {
+  return this * 100 + '%'
+}
+
 export const install = (): void => {
   Object.assign(Number, {
     isNumber,
     isNegativeZero
   })
   Object.assign(Number.prototype, {
-    toSigned
+    toSigned,
+    toPercent
   })
 }
