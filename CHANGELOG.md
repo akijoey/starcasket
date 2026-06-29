@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/akijoey/starcasket/compare/v1.4.5...v1.4.6) (2026-06-29)
+
+
+### Bug Fixes
+
+* percent digits ([727b3c9](https://github.com/akijoey/starcasket/commit/727b3c9a31ebc71fa9f275d0ca103087b9624824))
+
 ## [1.4.5](https://github.com/akijoey/starcasket/compare/v1.4.4...v1.4.5) (2026-05-26)
 
 
