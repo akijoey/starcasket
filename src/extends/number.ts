@@ -1,3 +1,5 @@
+import { roundTo, digits } from './math'
+
 export const isNumber = function isNumber(value: unknown): boolean {
   return typeof value === 'number' && !isNaN(value)
 }
@@ -11,7 +13,7 @@ export const toSigned = function toSigned(this: number): string {
 }
 
 export const toPercent = function toPercent(this: number): string {
-  return this * 100 + '%'
+  return roundTo(this * 100, digits(this) - 2) + '%'
 }
 
 export const install = (): void => {
